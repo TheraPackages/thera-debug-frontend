@@ -1,0 +1,54 @@
+{
+  "name": "thera-debug-frontend",
+  "version": "0.0.1",
+  "description": "thera debug frontend",
+  "main": "./lib/thera-debug-frontend",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@gitlab.alibaba-inc.com:project-falcon/thera-debug-frontend.git"
+  },
+  "keywords": [
+    "thera",
+    "debug"
+  ],
+  "author": "shiji.hc",
+  "license": "ISC",
+  "publishConfig": {
+    "registry": "http://registry.npm.alibaba-inc.com"
+  },
+  "dependencies": {
+    "install": "~0.8.7",
+    "jquery": "~3.1.1",
+    "npm": "~4.2.0",
+    "rc-checkbox": "~1.4.4",
+    "rc-collapse": "~1.6.12",
+    "react": "~15.4.2",
+    "react-dom": "~15.4.2",
+    "standard": "~8.5.0"
+  },
+  "standard": {
+    "globals": [
+      "atom",
+      "$"
+    ]
+  },
+  "consumedServices": {
+    "thera-debug-protocol": {
+      "description": "",
+      "versions": {
+        "1.0.0": "cosumeDebugService"
+      }
+    }
+  },
+  "providedServices": {
+    "thera-debug-protocol": {
+      "description": "Does a useful thing",
+      "versions": {
+        "1.0.0": "provideDebugService"
+      }
+    }
+  }
+}

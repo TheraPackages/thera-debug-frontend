@@ -1,0 +1,42 @@
+.debug-section-header {
+  color: gray;
+  font-weight: bold;
+}
+
+.call-stack-method {
+  font-size: x-small;
+  color: gray;
+  font-weight: lighter;
+}
+
+.call-stack-method-highlight {
+  font-size: x-small;
+  color: white;
+  font-weight: bold;
+}
+
+.call-stack-file-and-line {
+  font-size: x-small;
+  color: gray;
+  font-weight: lighter;
+}
+
+.call-stack-file-and-line-highlight {
+  font-size: x-small;
+  color: white;
+  font-weight: bold;
+}
+
+.call-stack-element {
+  background-color: inherit;
+}
+
+.call-stack-element-highlight {
+  background-color: #0088ff;
+}
+
+.breakpint-file-and-line {
+  font-size: small;
+  color: gray;
+  font-weight: lighter;
+}
