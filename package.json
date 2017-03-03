@@ -27,7 +27,8 @@
     "rc-collapse": "~1.6.12",
     "react": "~15.4.2",
     "react-dom": "~15.4.2",
-    "standard": "~8.5.0"
+    "standard": "~8.5.0",
+    "thera-debug-common-types": "~0.1.1"
   },
   "standard": {
     "globals": [

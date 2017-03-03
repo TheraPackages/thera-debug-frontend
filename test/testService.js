@@ -1,10 +1,11 @@
 'use babel'
 'use strict'
 
-const DebugService = require('./debugService')
-const Breakpoint = require('../types/breakpoint')
-const CallFrame = require('../types/callframe')
-const {COMMAND, CallStackPayload, ResolveBreakpointPayload} = require('../types/payload')
+const {DebugService, Breakpoint, CallFrame} = require('thera-debug-common-types')
+const {COMMAND,
+  CallStackPayload,
+  ResolveBreakpointPayload,
+  UpdateScopePayload} = require('thera-debug-common-types').Payload
 
 module.exports =
 class TestService extends DebugService {
@@ -23,6 +24,10 @@ class TestService extends DebugService {
       new CallFrame('2', 'reSetupModel', 7, '/Users/nickolas/Proj/falcon/thera-debug-frontend/lib/service/callFrameService.js')
     ]
     let payload = new CallStackPayload(callFrames, 'breakpoint', [], '0')
+
+    // let scopePayload = new UpdateScopePayload({Locals:[
+    //   {}
+    // ]})
 
     let _this = this
     setTimeout(() => {
