@@ -26,15 +26,20 @@ atom-text-editor::shadow .gutter .line-number {
     background-color: @blue-color;
   }
 
-  &.line-number-red {
+  &.line-number-breakpoint {
     color: #fff;
-    background-color: @red-color;
+    // background-color: @red-color;
+    background-image: @breakpoint-url;
+    background-repeat: no-repeat;
+    background-position: center;
     opacity: 1;
   }
 
-  &.line-number-red-disable {
+  &.line-number-breakpoint-disable {
     color: #fff;
-    background-color: @red-color;
+    background-image: @breakpoint-url;
+    background-repeat: no-repeat;
+    background-position: center;
     opacity: 0.5;
   }
 }

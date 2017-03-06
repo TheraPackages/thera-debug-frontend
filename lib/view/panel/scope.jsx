@@ -11,7 +11,7 @@ class Scope extends React.Component {
   render () {
     return (
       <div>
-        {/* <Collapse defaultActiveKey={['debugControl', 'callStack', 'scope', 'breakpoint']}>
+        {/* <Collapse>
           <Panel header='Debug Control' className='debug-section-header' key='debugControl'>
             <DebugControl provider={this.props.provider} />
           </Panel>

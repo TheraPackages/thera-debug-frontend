@@ -14,8 +14,8 @@
     "thera",
     "debug"
   ],
-  "author": "shiji.hc",
-  "license": "ISC",
+  "author": "NickolasHu",
+  "license": "MIT",
   "publishConfig": {
     "registry": "http://registry.npm.alibaba-inc.com"
   },
@@ -28,7 +28,7 @@
     "react": "~15.4.2",
     "react-dom": "~15.4.2",
     "standard": "~8.5.0",
-    "thera-debug-common-types": "~0.1.1"
+    "thera-debug-common-types": "file:../thera-debug-common-types"
   },
   "standard": {
     "globals": [
