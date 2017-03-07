@@ -11,6 +11,8 @@ class CallStackElement extends React.Component {
   }
 
   render () {
+    let location = this.props.calling.location
+    location = typeof location === 'object' ? location.lineNumber : location
     return (
       <p onClick={this._handleSelect}
         className={this.props.highlight ? 'call-stack-element-highlight' : 'call-stack-element'}>
@@ -19,7 +21,7 @@ class CallStackElement extends React.Component {
         </label>
         <label className={this.props.highlight
           ? 'call-stack-file-and-line-highlight' : 'call-stack-file-and-line'}>
-          {this.props.calling.fileURL}:{this.props.calling.location}
+          {this.props.calling.fileURL}:{location}
         </label>
       </p>
     )
