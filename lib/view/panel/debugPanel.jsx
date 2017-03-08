@@ -25,7 +25,7 @@ class DebugPanel extends React.Component {
             <CallStack callstack={this.props.model.callStackModel} provider={this.props.provider} />
           </Panel>
           <Panel header='Scope' className='debug-section-header' key='scope'>
-            <Scope scope={this.props.model.scopeModel} />
+            <Scope scopeModel={this.props.model.scopeModel} provider={this.props.provider} />
           </Panel>
           <Panel header='Break Points' className='debug-section-header' key='breakpoint'>
             <BreakPoints breakpoints={this.props.model.breakpointModel} provider={this.props.provider} />

@@ -6,6 +6,7 @@ const {COMMAND,
   CallStackPayload,
   ResolveBreakpointPayload,
   UpdateScopePayload} = require('thera-debug-common-types').Payload
+const {RemoteObject, PropertyDescriptor} = require('thera-debug-common-types').Scope
 
 module.exports =
 class TestService extends DebugService {
@@ -57,5 +58,12 @@ class TestService extends DebugService {
     setTimeout(() => {
       _this.paused(payload)
     })
+  }
+
+  // get properties
+  getProperties (objectId) {
+    let mockA = new PropertyDescriptor('varA', new RemoteObject('object', 'TestService', undefined, 'mockA', undefined))
+    let mockB = new PropertyDescriptor('varB', new RemoteObject('object', 'DebugService', undefined, 'mockB', undefined))
+    return Promise.resolve([mockA, mockB])
   }
 }

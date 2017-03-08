@@ -28,7 +28,7 @@
     "react": "~15.4.2",
     "react-dom": "~15.4.2",
     "standard": "~8.5.0",
-    "thera-debug-common-types": "file:../thera-debug-common-types"
+    "thera-debug-common-types": "git+ssh://git@github.com:TheraPackages/thera-debug-common-types.git"
   },
   "standard": {
     "globals": [

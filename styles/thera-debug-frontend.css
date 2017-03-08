@@ -40,3 +40,11 @@
   color: gray;
   font-weight: lighter;
 }
+
+.scope-label {
+  color: #e06c6e;
+}
+
+i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
+  color: #9da5b4
+}
