@@ -48,8 +48,3 @@
 i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
   color: #9da5b4
 }
-
-#symbols-tabs-debug {
-  overflow: auto;
-  height: 100%;
-}
