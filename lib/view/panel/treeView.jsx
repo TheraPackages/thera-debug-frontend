@@ -135,6 +135,11 @@ class TreeView extends React.Component {
         </div>
       )
     } else {
+      const _this = this
+      this._loadNodes().then(
+        (rootNode) => _this.setState({root: rootNode})
+      )
+
       return (
         <div>
           No element
