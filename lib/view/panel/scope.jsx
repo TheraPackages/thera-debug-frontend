@@ -71,9 +71,9 @@ class Scope extends React.Component {
   _onGetNodes (scope, item) {
     let result
     if (!item) {
-      result = this.props.provider.getProperties(scope.object.id)
+      result = this.props.provider.getProperties(scope.object.objectId)
     } else {
-      result = this.props.provider.getProperties(item.value.id)
+      result = this.props.provider.getProperties(item.value.objectId)
     }
     return result
   }
