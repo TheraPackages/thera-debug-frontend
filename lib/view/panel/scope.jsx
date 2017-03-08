@@ -52,7 +52,7 @@ class Scope extends React.Component {
   }
 
   _onCheckLeaf (item) {
-    return !item.value.hasChildren
+    return !item.value.hasChildren()
   }
 
   _onRenderContent (item) {
