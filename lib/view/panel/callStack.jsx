@@ -41,7 +41,6 @@ class CallStack extends React.Component {
     var _this = this
     const stackList = this.state.callstack ? this.state.callstack.map((calling, i) =>
       <CallStackElement
-        key={this.makeKey(calling)}
         calling={calling}
         index={i}
         onClick={_this._handleSelect}
@@ -51,15 +50,14 @@ class CallStack extends React.Component {
 
     return (
       <div>
-        {/* <p className='debug-section-header'>Call Stack</p> */}
         {stackList}
       </div>
     )
   }
 
-  makeKey (calling) {
-    return calling.fileURL + ':' + (typeof calling.location === 'object' ? calling.location.lineNumber : calling.location)
-  }
+  // makeKey (calling) {
+  //   return calling.fileURL + ':' + (typeof calling.location === 'object' ? calling.location.lineNumber : calling.location)
+  // }
 }
 
 module.exports = CallStack
