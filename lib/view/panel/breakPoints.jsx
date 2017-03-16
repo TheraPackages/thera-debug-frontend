@@ -83,6 +83,7 @@ class BreakPoints extends React.Component {
         breakpoints: breakpointModel.getBreakpoints(),
         selectedId: this.props.breakpoints.selectedId
       })
+      _this.forceUpdate()
     }))
   }
 
