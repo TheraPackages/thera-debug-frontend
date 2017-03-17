@@ -10,9 +10,17 @@ class Scope extends React.Component {
   constructor (props) {
     super(props)
 
+    let scopes = this.props.scopeModel.scopes
+    let unfoldSet = new Set()
+
+    // unfold first scope by default
+    if (scopes.length > 0) {
+      unfoldSet.add(scopes[0].type)
+    }
     // scopes are tree of @type PropertyDescriptor
     this.state = {
-      scopes: this.props.scopeModel.scopes
+      scopes: this.props.scopeModel.scopes,
+      unfolds: unfoldSet
     }
   }
 
@@ -36,19 +44,43 @@ class Scope extends React.Component {
   }
 
   _createSection (scope) {
+    let className
+    if (this._isUnfold(scope.type)) {
+      className = 'fa fa-arrow-down fa-fw'
+    } else {
+      className = 'fa fa-arrow-right fa-fw'
+    }
     return (
       <div>
-        <i className='fa fa-arrow-down fa-fw' />
+        <i className={className} onClick={this._onFold.bind(this, scope)} />
         <label>{scope.type}</label>
-        <TreeView
-          onGetNodes={this._onGetNodes.bind(this, scope)}
-          onRenderContent={this._onRenderContent.bind(this)}
-          onCheckLeaf={this._onCheckLeaf.bind(this)}
-          iconExpand='arrow-down'
-          iconCollapse='arrow-right'
-        />
+        {this._isUnfold(scope.type) &&
+          <TreeView
+            onGetNodes={this._onGetNodes.bind(this, scope)}
+            onRenderContent={this._onRenderContent.bind(this)}
+            onCheckLeaf={this._onCheckLeaf.bind(this)}
+            iconExpand='arrow-down'
+            iconCollapse='arrow-right'
+          />
+        }
       </div>
     )
+  }
+
+  _onFold (scope) {
+    let type = scope.type
+    if (this._isUnfold(type)) {
+      this.state.unfolds.delete(type)
+    } else {
+      this.state.unfolds.add(type)
+    }
+    this.setState({
+      unfolds: this.state.unfolds
+    })
+  }
+
+  _isUnfold (scopeType) {
+    return this.state.unfolds.has(scopeType)
   }
 
   _onCheckLeaf (item) {
