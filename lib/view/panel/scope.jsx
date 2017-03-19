@@ -10,7 +10,7 @@ class Scope extends React.Component {
   constructor (props) {
     super(props)
 
-    let scopes = this.props.scopeModel.scopes
+    let scopes = this.props.scopeModel ? this.props.scopeModel.scopes : []
     let unfoldSet = new Set()
 
     // unfold first scope by default
@@ -18,8 +18,9 @@ class Scope extends React.Component {
       unfoldSet.add(scopes[0].type)
     }
     // scopes are tree of @type PropertyDescriptor
+
     this.state = {
-      scopes: this.props.scopeModel.scopes,
+      scopes: scopes,
       unfolds: unfoldSet
     }
   }

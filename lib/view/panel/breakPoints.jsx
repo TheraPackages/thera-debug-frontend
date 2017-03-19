@@ -10,9 +10,14 @@ class BreakPoints extends React.Component {
   constructor (props) {
     super(props)
     this.disposables = new CompositeDisposable()
-    this.state = {
-      breakpoints: this.props.breakpoints.getBreakpoints(),
-      selectedId: this.props.breakpoints.selectedId
+
+    if (this.props.breakpoints) {
+      this.state = {
+        breakpoints: this.props.breakpoints.getBreakpoints(),
+        selectedId: this.props.breakpoints.selectedId
+      }
+    } else {
+      this.state = {}
     }
 
     this._onStatusChange = this._onStatusChange.bind(this)

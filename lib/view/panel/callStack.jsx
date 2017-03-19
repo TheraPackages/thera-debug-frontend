@@ -11,9 +11,14 @@ class CallStack extends React.Component {
     super(props)
     this.disposables = new CompositeDisposable()
     this._handleSelect = this._handleSelect.bind(this)
-    this.state = {
-      selectedIndex: this.props.callstack.getSelectedIndex(),
-      callstack: this.props.callstack.getCallStack()
+
+    if (this.props.callstack) {
+      this.state = {
+        selectedIndex: this.props.callstack.getSelectedIndex(),
+        callstack: this.props.callstack.getCallStack()
+      }
+    } else {
+      this.state = {}
     }
   }
 

@@ -20,7 +20,7 @@
     "registry": "http://registry.npm.alibaba-inc.com"
   },
   "dependencies": {
-    "fs-promise": "^2.0.0",
+    "fs-promise": "~2.0.0",
     "install": "~0.8.7",
     "jquery": "~3.1.1",
     "npm": "~4.2.0",
