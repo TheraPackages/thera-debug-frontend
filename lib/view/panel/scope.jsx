@@ -21,7 +21,8 @@ class Scope extends React.Component {
 
     this.state = {
       scopes: scopes,
-      unfolds: unfoldSet
+      unfolds: unfoldSet,
+      thisObject: this.props.scopeModel.thisObject
     }
   }
 
@@ -29,7 +30,8 @@ class Scope extends React.Component {
     const _this = this
     this.disposable = new Disposable(this.props.scopeModel.onChange(() => {
       _this.setState({
-        scopes: this.props.scopeModel.scopes
+        scopes: this.props.scopeModel.scopes,
+        thisObject: this.props.scopeModel.thisObject
       })
     }))
   }
@@ -51,6 +53,7 @@ class Scope extends React.Component {
     } else {
       className = 'fa fa-arrow-right fa-fw'
     }
+
     return (
       <div>
         <i className={className} onClick={this._onFold.bind(this, scope)} />
@@ -107,6 +110,18 @@ class Scope extends React.Component {
       result = this.props.provider.getProperties(scope.object.objectId)
     } else {
       result = this.props.provider.getProperties(item.value.objectId)
+    }
+
+    if (item === undefined && this.state.thisObject && scope.type.toLowerCase() === 'local') {
+      if (!result) {
+        result = this.state.thisObject
+      } else if (result.then) {
+        result = result.then((items) => {
+          return items.concat(this.state.thisObject)
+        })
+      } else {
+        result.push(this.state.thisObject)
+      }
     }
     return result
   }
