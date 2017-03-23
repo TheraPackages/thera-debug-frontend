@@ -1,6 +1,6 @@
 {
   "name": "thera-debug-frontend",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "thera debug frontend",
   "main": "./lib/thera-debug-frontend",
   "scripts": {
