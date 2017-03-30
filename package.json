@@ -51,6 +51,12 @@
       "versions": {
         "1.0.0": "provideDebugService"
       }
+    },
+    "thera-service-provider": {
+      "description": "provide thera debug services",
+      "versions": {
+        "1.0.0": "theraServiceProvider"
+      }
     }
   }
 }
