@@ -33,7 +33,7 @@ class BreakPointsElement extends React.Component {
 
   _handleStatusChange (e, checked) {
     // checked is original status
-    this.props.onStatusChange(this.props.breakpoint.id, !this.props.breakpoint.enable)
+    this.props.onStatusChange(this.props.breakpoint, !this.props.breakpoint.enable)
   }
 
   _labelContent () {

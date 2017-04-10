@@ -1,0 +1,19 @@
+{
+  "version": "0.1.2",
+  "main": "${workspaceRoot}/main.we",
+  "launch": {
+    "appid": "com.taobao.preview",
+    "path": "${attachPackage}/weex-run/resources/Preview.app",
+    "pathAndroid": "${attachPackage}/weex-run/resources/Preview.apk",
+    "appidAndroid": "com.alibaba.falcon/com.alibaba.falcon.activity.MainActivity"
+  },
+  "type": "test",
+  "transformPath":"${workspaceRoot}/out",
+  "mock": [
+    {
+      "path": "data.data.cmAboveResult.modules",
+      "api": "mtop.tmall.search.searchproduct",
+      "file": "${workspaceRoot}/mock.json"
+    }
+  ]
+}

@@ -51,8 +51,8 @@ class TestService extends DebugService {
   }
 
   // breakpoint
-  setBreakpoint (file, line) {
-    let breakpoint = new Breakpoint(file + ':' + line, file, line, true)
+  setBreakpoint (file, line, active = true) {
+    let breakpoint = new Breakpoint(file + ':' + line, file, line, active)
     let payload = new ResolveBreakpointPayload(breakpoint)
     let _this = this
     setTimeout(() => {
