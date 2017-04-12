@@ -35,10 +35,11 @@ class BreakPoints extends React.Component {
       />
     ) : undefined
     return (
-      <div>
-        {/* <p className='debug-section-header'>Break Points</p> */}
-        {breakPointList}
-      </div>
+      <table>
+        <tbody>
+          {breakPointList}
+        </tbody>
+      </table>
     )
   }
 

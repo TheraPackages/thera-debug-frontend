@@ -17,10 +17,8 @@ class DebugPanel extends React.Component {
   render () {
     return (
       <div>
-        <Collapse defaultActiveKey={['debugControl', 'callStack', 'scope', 'breakpoint']}>
-          <Panel header='Debug Control' className='debug-section-header' key='debugControl'>
-            <DebugControl provider={this.props.provider} />
-          </Panel>
+        <DebugControl provider={this.props.provider} />
+        <Collapse defaultActiveKey={['callStack', 'scope', 'breakpoint']}>
           <Panel header='Call Stack' className='debug-section-header' key='callStack'>
             <CallStack callstack={this.props.model.callStackModel} provider={this.props.provider} />
           </Panel>

@@ -53,10 +53,24 @@ class CallStack extends React.Component {
       />
     ) : undefined
 
+    let head
+    if (stackList && stackList.length > 0) {
+      head =
+        <thead>
+          <th>function</th>
+          <th>script</th>
+          <th>line</th>
+        </thead>
+    }
+
     return (
-      <div>
-        {stackList}
-      </div>
+      <table className='table-callstack'>
+        {head}
+        <tbody>
+          {stackList}
+        </tbody>
+
+      </table>
     )
   }
 

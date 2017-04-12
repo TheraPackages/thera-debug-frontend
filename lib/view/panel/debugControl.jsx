@@ -6,12 +6,22 @@ const React = require('react')
 class DebugControl extends React.Component {
   render () {
     return (
-      <div>
-        <button onClick={(e) => this.resumeDebug(e)}>continue</button>
-        <button onClick={(e) => this.stepOver(e)}>step over</button>
-        <button onClick={(e) => this.stepInto(e)}>step into</button>
-        <button onClick={(e) => this.stepOut(e)}>step out</button>
-        <button onClick={(e) => this.stop(e)}>stop</button>
+      <div className='thera-debug-control'>
+        <button className='btn' onClick={(e) => this.resumeDebug(e)} title='continue'>
+          <i className='fa fa-eject' aria-hidden='true' />
+        </button>
+        <button className='btn' onClick={(e) => this.stepOver(e)} title='step over'>
+          <i className='fa fa-arrow-right' aria-hidden='true' />
+        </button>
+        <button className='btn' onClick={(e) => this.stepInto(e)} title='step into'>
+          <i className='fa fa-arrow-down' aria-hidden='true' />
+        </button>
+        <button className='btn' onClick={(e) => this.stepOut(e)} title='step out'>
+          <i className='fa fa-arrow-up' aria-hidden='true' />
+        </button>
+        <button className='btn' onClick={(e) => this.stop(e)} title='stop'>
+          <i className='fa fa-stop' aria-hidden='true' />
+        </button>
       </div>
     )
   }

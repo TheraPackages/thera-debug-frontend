@@ -15,15 +15,22 @@ class BreakPointsElement extends React.Component {
 
   render () {
     return (
-      <p onClick={this._handleSelect}
+      <tr onClick={this._handleSelect}
         className='call-stack-element'>
-        <Checkbox checked={this.props.breakpoint.enable ? 1 : 0}
-          onChange={this._handleStatusChange}
-        />
-        <label className='call-stack-file-and-line-highlight'>
-          {this._labelContent()}
-        </label>
-      </p>
+        <td>
+          <Checkbox checked={this.props.breakpoint.enable ? 1 : 0}
+            onChange={this._handleStatusChange}
+          />
+          <label data-title={this.props.breakpoint.path}>
+            {path.basename(this.props.breakpoint.path)}
+          </label>
+        </td>
+        <td>
+          <label>
+            {this.props.breakpoint.line}
+          </label>
+        </td>
+      </tr>
     )
   }
 
@@ -36,7 +43,7 @@ class BreakPointsElement extends React.Component {
     this.props.onStatusChange(this.props.breakpoint, !this.props.breakpoint.enable)
   }
 
-  _labelContent () {
-    return path.basename(this.props.breakpoint.path) + ':' + this.props.breakpoint.line
-  }
+  // _labelContent () {
+  //   return path.basename(this.props.breakpoint.path) + ':' + this.props.breakpoint.line
+  // }
 }

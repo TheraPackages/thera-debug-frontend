@@ -3,42 +3,12 @@
   font-weight: bold;
 }
 
-.call-stack-method {
-  font-size: x-small;
+.thera-debug-tab td {
+  font-size: 0.9em;
+  line-height: 1.9em;
   color: gray;
   font-weight: lighter;
-}
 
-.call-stack-method-highlight {
-  font-size: x-small;
-  color: white;
-  font-weight: bold;
-}
-
-.call-stack-file-and-line {
-  font-size: x-small;
-  color: gray;
-  font-weight: lighter;
-}
-
-.call-stack-file-and-line-highlight {
-  font-size: x-small;
-  color: white;
-  font-weight: bold;
-}
-
-.call-stack-element {
-  background-color: inherit;
-}
-
-.call-stack-element-highlight {
-  background-color: #0088ff;
-}
-
-.breakpint-file-and-line {
-  font-size: small;
-  color: gray;
-  font-weight: lighter;
 }
 
 .scope-label {
@@ -47,4 +17,62 @@
 
 i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
   color: #9da5b4
+}
+
+.thera-debug-control i.fa.fa-eject {
+  transform: rotate(90deg);
+}
+
+.thera-debug-control {
+  margin-left: 20px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
+
+#symbols-tabs-debug {
+  overflow: auto;
+  height: 100%;
+}
+
+.thera-debug-control .btn {
+  background: inherit;
+}
+
+.thera-debug-tab table {
+  width: 100%;
+}
+
+.thera-debug-tab tr.selected {
+  background:#232933;
+}
+
+.thera-debug-tab tbody {
+  cursor: pointer;
+}
+
+.thera-debug-tab input {
+  margin: 3px 0.5em;
+}
+
+.thera-debug-tab .rc-collapse-content > .rc-collapse-content-box {
+  margin-top: 8px;
+  margin-bottom: 10px;
+}
+
+.thera-debug-tab td > label {
+  margin: 0px;
+}
+
+.thera-debug-tab .rc-collapse-content {
+  padding: 0 0.8em;
+}
+
+.thera-debug-tab .rc-collapse > .rc-collapse-item > .rc-collapse-header .arrow {
+  border-left-color: #9e9e9e;
+
+}
+
+.thera-debug-tab .rc-collapse > .rc-collapse-item-active > .rc-collapse-header .arrow {
+  border-left-color: transparent;
+  border-top-color: #9e9e9e;
 }

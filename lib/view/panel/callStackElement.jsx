@@ -2,6 +2,7 @@
 'use strict'
 
 const React = require('react')
+const path = require('path')
 
 module.exports =
 class CallStackElement extends React.Component {
@@ -14,16 +15,18 @@ class CallStackElement extends React.Component {
     let location = this.props.calling.location
     location = typeof location === 'object' ? location.lineNumber : location
     return (
-      <p onClick={this._handleSelect}
-        className={this.props.highlight ? 'call-stack-element-highlight' : 'call-stack-element'}>
-        <label className={this.props.highlight ? 'call-stack-method-highlight' : 'call-stack-method'}>
+      <tr onClick={this._handleSelect}
+        className={this.props.highlight ? 'selected' : ''}>
+        <td data-title={this.props.calling.functionName}>
           {this.props.calling.functionName}
-        </label>
-        <label className={this.props.highlight
-          ? 'call-stack-file-and-line-highlight' : 'call-stack-file-and-line'}>
-          {this.props.calling.fileURL}:{location}
-        </label>
-      </p>
+        </td>
+        <td data-title='this.props.calling.fileURL'>
+          {path.basename(this.props.calling.fileURL)}
+        </td>
+        <td>
+          {location}
+        </td>
+      </tr>
     )
   }
 
