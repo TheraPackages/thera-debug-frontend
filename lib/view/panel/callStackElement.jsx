@@ -17,10 +17,10 @@ class CallStackElement extends React.Component {
     return (
       <tr onClick={this._handleSelect}
         className={this.props.highlight ? 'selected' : ''}>
-        <td data-title={this.props.calling.functionName}>
+        <td title={this.props.calling.functionName}>
           {this.props.calling.functionName}
         </td>
-        <td data-title='this.props.calling.fileURL'>
+        <td title={this.props.calling.fileURL}>
           {path.basename(this.props.calling.fileURL)}
         </td>
         <td>

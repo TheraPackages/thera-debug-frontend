@@ -6,9 +6,11 @@
 .thera-debug-tab td {
   font-size: 0.9em;
   line-height: 1.9em;
-  color: gray;
+  color: #abb2bf;
   font-weight: lighter;
-
+  max-width: 10em;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .scope-label {
@@ -16,7 +18,7 @@
 }
 
 i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
-  color: #9da5b4
+  color: #9da5b4;
 }
 
 .thera-debug-control i.fa.fa-eject {
@@ -44,6 +46,12 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 
 .thera-debug-tab tr.selected {
   background:#232933;
+}
+
+.thera-debug-tab tr {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .thera-debug-tab tbody, .thera-debug-tab label {
