@@ -28,7 +28,7 @@
     "rc-collapse": "~1.6.12",
     "react": "~15.4.2",
     "react-dom": "~15.4.2",
-    "thera-debug-common-types": "~0.1.8"
+    "thera-debug-common-types": "~0.2.2"
   },
   "devDependencies": {
     "standard": "~8.5.0"
