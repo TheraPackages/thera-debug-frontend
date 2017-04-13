@@ -13,7 +13,12 @@
   overflow: hidden;
 }
 
-.scope-label {
+.thera-debug-tab .scope label {
+  font-size: 0.9em;
+  color: #abb2bf;
+}
+
+.thera-debug-tab label.scope-label {
   color: #e06c6e;
 }
 
@@ -38,6 +43,14 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 
 .thera-debug-control .btn {
   background: inherit;
+}
+
+.thera-debug-control .btn.green {
+  color: green;
+}
+
+.thera-debug-control .btn.red {
+  color: red;
 }
 
 .thera-debug-tab table {

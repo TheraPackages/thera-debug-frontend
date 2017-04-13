@@ -55,7 +55,7 @@ class Scope extends React.Component {
     }
 
     return (
-      <div>
+      <div className='scope' >
         <i className={className} onClick={this._onFold.bind(this, scope)} />
         <label>{scope.type}</label>
         {this._isUnfold(scope.type) &&
