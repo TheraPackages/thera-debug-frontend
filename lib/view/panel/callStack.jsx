@@ -73,10 +73,6 @@ class CallStack extends React.Component {
       </table>
     )
   }
-
-  // makeKey (calling) {
-  //   return calling.fileURL + ':' + (typeof calling.location === 'object' ? calling.location.lineNumber : calling.location)
-  // }
 }
 
 module.exports = CallStack
