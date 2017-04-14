@@ -28,6 +28,7 @@
     "rc-collapse": "~1.6.12",
     "react": "~15.4.2",
     "react-dom": "~15.4.2",
+    "sanitize-filename": "^1.6.1",
     "thera-debug-common-types": "~0.2.2"
   },
   "devDependencies": {
