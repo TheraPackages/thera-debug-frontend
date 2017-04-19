@@ -1,5 +1,5 @@
 {
-  "version": "0.1.2",
+  "version": "0.1.3",
   "main": "${workspaceRoot}/main.we",
   "launch": {
     "appid": "com.taobao.preview",
@@ -9,6 +9,7 @@
   },
   "type": "test",
   "transformPath":"${workspaceRoot}/out",
+  "notifyOnSync": true,
   "mock": [
     {
       "path": "data.data.cmAboveResult.modules",
