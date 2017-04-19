@@ -66,7 +66,7 @@ class CallStack extends React.Component {
     return (
       <table className='table-callstack'>
         {head}
-        <tbody>
+        <tbody className='callstack-body'>
           {stackList}
         </tbody>
 

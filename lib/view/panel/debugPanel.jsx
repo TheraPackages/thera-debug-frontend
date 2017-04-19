@@ -19,13 +19,13 @@ class DebugPanel extends React.Component {
       <div>
         <DebugControl provider={this.props.provider} />
         <Collapse defaultActiveKey={['callStack', 'scope', 'breakpoint']}>
-          <Panel header='Call Stack' className='debug-section-header' key='callStack'>
+          <Panel header='Call Stack' className='debug-section-header call-stack' key='callStack'>
             <CallStack callstack={this.props.model.callStackModel} provider={this.props.provider} />
           </Panel>
-          <Panel header='Scope' className='debug-section-header' key='scope'>
+          <Panel header='Scope' className='debug-section-header scope' key='scope'>
             <Scope scopeModel={this.props.model.scopeModel} provider={this.props.provider} />
           </Panel>
-          <Panel header='Break Points' className='debug-section-header' key='breakpoint'>
+          <Panel header='Break Points' className='debug-section-header breakpoints' key='breakpoint'>
             <BreakPoints breakpoints={this.props.model.breakpointModel} provider={this.props.provider} />
           </Panel>
         </Collapse>
