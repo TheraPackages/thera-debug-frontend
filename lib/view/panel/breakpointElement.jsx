@@ -16,7 +16,7 @@ class BreakPointsElement extends React.Component {
   render () {
     return (
       <tr onClick={this._handleSelect}
-        className='call-stack-element'>
+        className='breakpoint-element'>
         <td>
           <Checkbox checked={this.props.breakpoint.enable ? 1 : 0}
             onChange={this._handleStatusChange}

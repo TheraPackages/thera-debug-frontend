@@ -124,3 +124,25 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 .thera-debug-tab table.table-callstack {
   color: #7494a3;
 }
+
+.breakpoint-element .rc-checkbox input {
+  -webkit-appearance: none;
+  border: 1px solid gray;
+  width: 14px;
+  height: 14px;
+}
+
+.breakpoint-element .rc-checkbox-checked input:after {
+  -webkit-appearance: none;
+  content: '\2714';
+  font-size: 14px;
+  position: relative;
+  color: #698cfe;
+}
+
+.breakpoint-element label {
+  font-size: 1em;
+  color: #a2a9ac;
+  top: -0.3em;
+  position: relative;
+}
