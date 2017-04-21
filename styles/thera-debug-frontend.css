@@ -135,9 +135,10 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 .breakpoint-element .rc-checkbox-checked input:after {
   -webkit-appearance: none;
   content: '\2714';
-  font-size: 14px;
+  font-size: 16px;
   position: relative;
   color: #698cfe;
+  top: -5px;
 }
 
 .breakpoint-element label {
