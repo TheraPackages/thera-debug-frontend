@@ -17,6 +17,11 @@
 .thera-debug-tab .scope label {
   font-size: 0.9em;
   color: #abb2bf;
+  font-weight: lighter;
+}
+
+.thera-debug-tab .scope i {
+  color: #9e9e9e;
 }
 
 .thera-debug-tab label.scope-label {

@@ -49,9 +49,9 @@ class Scope extends React.Component {
   _createSection (scope) {
     let className
     if (this._isUnfold(scope.type)) {
-      className = 'fa fa-arrow-down fa-fw'
+      className = 'fa fa-angle-down fa-fw'
     } else {
-      className = 'fa fa-arrow-right fa-fw'
+      className = 'fa fa-angle-right fa-fw'
     }
 
     return (
@@ -63,8 +63,8 @@ class Scope extends React.Component {
             onGetNodes={this._onGetNodes.bind(this, scope)}
             onRenderContent={this._onRenderContent.bind(this)}
             onCheckLeaf={this._onCheckLeaf.bind(this)}
-            iconExpand='arrow-down'
-            iconCollapse='arrow-right'
+            iconExpand='fa fa-angle-down fa-fw'
+            iconCollapse='fa fa-angle-right fa-fw'
           />
         }
       </div>
