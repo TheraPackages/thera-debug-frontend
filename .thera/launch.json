@@ -7,7 +7,7 @@
     "pathAndroid": "${attachPackage}/weex-run/resources/Preview.apk",
     "appidAndroid": "com.alibaba.falcon/com.alibaba.falcon.activity.MainActivity"
   },
-  "type": "test",
+  "type": "weex",
   "transformPath":"${workspaceRoot}/out",
   "notifyOnSync": true,
   "mock": [
