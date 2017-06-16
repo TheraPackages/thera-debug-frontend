@@ -3,8 +3,8 @@
   "main": "${workspaceRoot}/main.we",
   "launch": {
     "appid": "com.taobao.preview",
-    "path": "${attachPackage}/weex-run/resources/Preview.app",
-    "pathAndroid": "${attachPackage}/weex-run/resources/Preview.apk",
+    "path": "${mainNodeModulesPath}/weex-run/resources/Preview.app",
+    "pathAndroid": "${mainNodeModulesPath}/weex-run/resources/Preview.apk",
     "appidAndroid": "com.alibaba.falcon/com.alibaba.falcon.activity.MainActivity"
   },
   "type": "weex",
