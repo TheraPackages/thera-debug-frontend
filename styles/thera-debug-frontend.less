@@ -7,7 +7,7 @@
 .thera-debug-tab td {
   font-size: 0.9em;
   line-height: 1.9em;
-  color: #7f8082;
+  color: @base-background-color;
   font-weight: lighter;
   max-width: 10em;
   text-overflow: ellipsis;
@@ -16,12 +16,12 @@
 
 .thera-debug-tab .scope label {
   font-size: 0.9em;
-  color: #abb2bf;
+  color: @base-background-color;
   font-weight: lighter;
 }
 
 .thera-debug-tab .scope i {
-  color: #9e9e9e;
+  color: @base-background-color;
 }
 
 .thera-debug-tab label.scope-label {
@@ -29,7 +29,7 @@
 }
 
 i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
-  color: #9da5b4;
+  color: @base-background-color;
 }
 
 .thera-debug-control i.fa.fa-eject {
@@ -45,7 +45,7 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 #symbols-tabs-debug {
   overflow: auto;
   height: 100%;
-  background: #1f2326;
+  background: @base-background-color;
 }
 
 .thera-debug-control .btn {
@@ -70,7 +70,7 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 }*/
 
 .thera-debug-tab tr.selected {
-  background:#242c2f;
+  background: @base-background-color;
   border-left: solid 3px #7494a3;
 }
 
@@ -107,33 +107,33 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 }
 
 .thera-debug-tab .rc-collapse > .rc-collapse-item > .rc-collapse-header .arrow {
-  border-left-color: #9e9e9e;
+  border-left-color: @base-background-color;
 }
 
 .thera-debug-tab .rc-collapse > .rc-collapse-item-active > .rc-collapse-header .arrow {
   border-left-color: transparent;
-  border-top-color: #9e9e9e;
+  border-top-color: @base-background-color;
 }
 
 .thera-debug-tab .rc-collapse-item.call-stack {
-  background: #1d1f21;
+  background: @base-background-color;
 }
 
 .thera-debug-tab .rc-collapse-item.scope {
-  background: #191b1d;
+  background: @base-background-color;
 }
 
 .thera-debug-tab .rc-collapse-item.breakpoints {
-  background: #121315;
+  background: @base-background-color;
 }
 
 .thera-debug-tab table.table-callstack {
-  color: #7494a3;
+  color: @base-background-color;
 }
 
 .breakpoint-element .rc-checkbox input {
   -webkit-appearance: none;
-  border: 1px solid gray;
+  border: 1px solid @base-background-color;
   width: 14px;
   height: 14px;
 }
@@ -149,7 +149,7 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 
 .breakpoint-element label {
   font-size: 1em;
-  color: #a2a9ac;
+  color: @base-background-color;
   top: -0.3em;
   position: relative;
 }
