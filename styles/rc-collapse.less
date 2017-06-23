@@ -3,14 +3,14 @@
 .rc-collapse {
   /*background-color: #f4f4f4;*/
   border-radius: 3px;
-  border: 1px solid #27292c;
+  border: 1px solid @base-background-color;
 }
 .rc-collapse-anim-active {
   -webkit-transition: height 0.2s ease-out;
   transition: height 0.2s ease-out;
 }
 .rc-collapse > .rc-collapse-item {
-  border-top: 1px solid #27292c;
+  border-top: 1px solid @base-background-color;
 }
 .rc-collapse > .rc-collapse-item:first-child {
   border-top: none;
@@ -31,13 +31,13 @@
   line-height: 0;
   border-top: 3px solid transparent;
   border-bottom: 3px solid transparent;
-  border-left: 4px solid #666;
+  border-left: 4px solid @text-color;
   vertical-align: middle;
   margin-right: 8px;
 }
 .rc-collapse-content {
   overflow: hidden;
-  color: #666;
+  color: @text-color-highlight;
   padding: 0 16px;
   /*background-color: #fff;*/
 }
@@ -54,6 +54,6 @@
 .rc-collapse > .rc-collapse-item-active > .rc-collapse-header .arrow {
   border-left: 3px solid transparent;
   border-right: 3px solid transparent;
-  border-top: 4px solid #27292c;
+  border-top: 4px solid @base-background-color;
   margin-right: 6px;
 }
