@@ -1,3 +1,5 @@
+@import "ui-variables";
+
 .debug-section-header {
   font-size: 12;
   color: #7494a3;
@@ -11,7 +13,7 @@
   max-width: 10em;
   text-overflow: ellipsis;
   overflow: hidden;
-  color: #6094a3;
+  color: @text-color;
 }
 
 .thera-debug-tab .scope label {
@@ -98,7 +100,7 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 
 .thera-debug-tab .rc-collapse-content {
   padding: 0 5px;
-  color: #6094a3;
+  color: @text-color;
 }
 
 .thera-debug-tab .rc-collapse > .rc-collapse-item > .rc-collapse-header .arrow {
@@ -128,7 +130,19 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 
 .breakpoint-element label {
   font-size: 1em;
-  color: #6094a3;
+  color: @text-color;
   top: -0.3em;
   position: relative;
+}
+
+.thera-debug-tab .rc-collapse-item.call-stack {
+  background: @base-background-color;
+}
+
+.thera-debug-tab .rc-collapse-item.scope {
+  background: @app-background-color;
+}
+
+.thera-debug-tab .rc-collapse-item.breakpoints {
+  background: @base-background-color;
 }
