@@ -1,3 +1,5 @@
+@import "ui-variables";
+
 .debug-section-header {
   font-size: 12;
   color: #7494a3;
@@ -7,33 +9,33 @@
 .thera-debug-tab td {
   font-size: 0.9em;
   line-height: 1.9em;
-  color: #7f8082;
   font-weight: lighter;
   max-width: 10em;
   text-overflow: ellipsis;
   overflow: hidden;
+  color: @text-color;
 }
 
 .thera-debug-tab .scope label {
   font-size: 0.9em;
-  color: #abb2bf;
   font-weight: lighter;
 }
 
-.thera-debug-tab .scope i {
-  color: #9e9e9e;
-}
 
 .thera-debug-tab label.scope-label {
   color: #e06c6e;
 }
 
 i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
-  color: #9da5b4;
+  color: @base-background-color;
 }
 
 .thera-debug-control i.fa.fa-eject {
   transform: rotate(90deg);
+}
+
+.thera-debug-tab i.fa.fa-fa.fa-angle-right.fa-fw.fa-fw, .thera-debug-tab i.fa-angle-down {
+  color: @text-color !important;
 }
 
 .thera-debug-control {
@@ -45,7 +47,6 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 #symbols-tabs-debug {
   overflow: auto;
   height: 100%;
-  background: #1f2326;
 }
 
 .thera-debug-control .btn {
@@ -70,13 +71,12 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 }*/
 
 .thera-debug-tab tr.selected {
-  background:#242c2f;
+  background: @background-color-highlight;
   border-left: solid 3px #7494a3;
 }
 
 .thera-debug-tab .rc-collapse > .rc-collapse-item, .thera-debug-tab .rc-collapse {
-  border-top: 0px;
-  border-bottom: 0px;
+  border: 0px;
 }
 
 .thera-debug-tab tr {
@@ -104,36 +104,21 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 
 .thera-debug-tab .rc-collapse-content {
   padding: 0 5px;
+  color: @text-color;
 }
 
 .thera-debug-tab .rc-collapse > .rc-collapse-item > .rc-collapse-header .arrow {
-  border-left-color: #9e9e9e;
+  border-left-color: @base-background-color;
 }
 
 .thera-debug-tab .rc-collapse > .rc-collapse-item-active > .rc-collapse-header .arrow {
   border-left-color: transparent;
-  border-top-color: #9e9e9e;
-}
-
-.thera-debug-tab .rc-collapse-item.call-stack {
-  background: #1d1f21;
-}
-
-.thera-debug-tab .rc-collapse-item.scope {
-  background: #191b1d;
-}
-
-.thera-debug-tab .rc-collapse-item.breakpoints {
-  background: #121315;
-}
-
-.thera-debug-tab table.table-callstack {
-  color: #7494a3;
+  border-top-color: @base-background-color;
 }
 
 .breakpoint-element .rc-checkbox input {
   -webkit-appearance: none;
-  border: 1px solid gray;
+  border: 1px solid @base-background-color;
   width: 14px;
   height: 14px;
 }
@@ -149,7 +134,19 @@ i.fa.fa-arrow-down.fa-fw, i.fa.fa-arrow-right.fa-fw {
 
 .breakpoint-element label {
   font-size: 1em;
-  color: #a2a9ac;
+  color: @text-color;
   top: -0.3em;
   position: relative;
+}
+
+.thera-debug-tab .rc-collapse-item.call-stack {
+  background: @base-background-color;
+}
+
+.thera-debug-tab .rc-collapse-item.scope {
+  background: @app-background-color;
+}
+
+.thera-debug-tab .rc-collapse-item.breakpoints {
+  background: @base-background-color;
 }
